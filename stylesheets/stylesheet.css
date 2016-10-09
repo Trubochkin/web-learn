@@ -9,6 +9,11 @@ by Jason Costello, @jsncostello
 MeyerWeb Reset
 *******************************************************************************/
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -18,30 +23,39 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
+article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-  display: block;
+	display: block;
 }
-
+body {
+	line-height: 1;
+}
 ol, ul {
-  list-style: none;
+	list-style: none;
 }
-
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 /*******************************************************************************
@@ -49,13 +63,17 @@ Theme Styles
 *******************************************************************************/
 
 body {
-  box-sizing: border-box;
-  color:#373737;
-  background: #212121;
-  font-size: 16px;
-  font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-/*  -webkit-font-smoothing: antialiased;*/
+	border: 3px ridge rgba(255, 255, 255, 0.8);
+	box-sizing: border-box;
+	color:#373737;
+	background-color: #212121;
+	background-image: url(../images/chalkboard.jpg) ;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100%;
+	font-size: 16px;
+	font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -72,9 +90,7 @@ h1 {
 }
 
 h2 {
-  padding-bottom: 10px;
   font-size: 32px;
-  background: url('../images/bg_hr.png') repeat-x bottom;
 }
 
 h3 {
@@ -105,17 +121,8 @@ a {
   text-decoration: none;
   color: #007edf;
   text-shadow: none;
-
   transition: color 0.5s ease;
   transition: text-shadow 0.5s ease;
-/*  -webkit-transition: color 0.5s ease;
-  -webkit-transition: text-shadow 0.5s ease;
-  -moz-transition: color 0.5s ease;
-  -moz-transition: text-shadow 0.5s ease;
-  -o-transition: color 0.5s ease;
-  -o-transition: text-shadow 0.5s ease;
-  -ms-transition: color 0.5s ease;
-  -ms-transition: text-shadow 0.5s ease;*/
 }
 
 a:hover, a:focus {text-decoration: underline;}
@@ -140,12 +147,7 @@ img {
   padding: 5px;
   margin: 10px 0 10px 0;
   border: 1px solid #ebebeb;
-
   box-shadow: 0 0 5px #ebebeb;
-/*  -webkit-box-shadow: 0 0 5px #ebebeb;
-  -moz-box-shadow: 0 0 5px #ebebeb;
-  -o-box-shadow: 0 0 5px #ebebeb;
-  -ms-box-shadow: 0 0 5px #ebebeb;*/
 }
 
 p img {
@@ -161,13 +163,9 @@ pre, code {
   width: 100%;
   color: #222;
   background-color: #fff;
-
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   font-size: 14px;
-
   border-radius: 2px;
-/*  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;*/
 }
 
 pre {
@@ -194,7 +192,6 @@ blockquote {
   padding: 0 0 0 20px;
   border-left: 3px solid #bbb;
 }
-
 
 ul, ol, dl {
   margin-bottom: 15px
@@ -227,10 +224,14 @@ dl p {
 }
 
 hr {
-  height: 1px;
-  margin-bottom: 5px;
-  border: none;
-  background: url('../images/bg_hr.png') repeat-x center;
+/*  border: 2px inset rgba(255, 255, 255, 0.8);*/
+	height: 0px;
+	margin: 0px;
+	padding: 0px;
+	size: 10px;
+	border-style: inset;
+    border-width: 2px;
+	border-color: rgba(255, 255, 255, 0.8);
 }
 
 table {
@@ -274,26 +275,36 @@ Full-Width Styles
 
 #forkme_banner {
   display: block;
-  position: absolute;
-  top:0;
-  right: 10px;
+  position: fixed;
+  top: 0px;
+  right: 0px;
   z-index: 10;
-  padding: 10px 50px 10px 10px;
+  padding: 2px 40px 5px 5px;
   color: #fff;
-  background: url('../images/blacktocat.png') #0090ff no-repeat 95% 50%;
+  background: url('../images/blacktocat.png') #0090ff no-repeat 98% 50%;
   font-weight: 700;
-  box-shadow: 0 0 10px rgba(0,0,0,.5);
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
+  box-shadow: 0 0 40px rgba(0,0,0,.8);
+  border-bottom-left-radius: 10px;
+/*  border-bottom-right-radius: 10px;*/
+}
+
+#forkme_banner:hover {
+  display: block;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  z-index: 10;
+  padding: 2px 40px 5px 5px;
+  color: #fff;
+  background: url('../images/blacktocat.png') #3FBFFF no-repeat 98% 50%;
+  font-weight: 700;
+  box-shadow: 0 0 40px rgba(255,246,86,.8);
+  border-bottom-left-radius: 10px;
+/*  border-bottom-right-radius: 10px;*/
 }
 
 #header_wrap {
-  background: #212121;
-/*  background: -moz-linear-gradient(top, #373737, #212121);
-  background: -webkit-linear-gradient(top, #373737, #212121);
-  background: -ms-linear-gradient(top, #373737, #212121);
-  background: -o-linear-gradient(top, #373737, #212121);
-  background: linear-gradient(top, #373737, #212121);*/
+	background: rgba(21, 21, 21, 0.6);
 }
 
 #header_wrap .inner {
@@ -308,6 +319,14 @@ Full-Width Styles
   text-shadow: #111 0px 0px 10px;
 }
 
+#project_title:hover {
+	margin: 0;
+  	color: #fff;
+  	font-size: 42px;
+  	font-weight: 700;
+  	text-shadow: #ff2 0px 0px 10px;
+}
+
 #project_tagline {
   color: #fff;
   font-size: 24px;
@@ -316,12 +335,8 @@ Full-Width Styles
   text-shadow: #111 0px 0px 10px;
 }
 
-
-
 #main_content_wrap {
-  background: #f2f2f2;
-  border-top: 1px solid #111;
-  border-bottom: 1px solid #111;
+	background: rgba(242, 242, 242, 0.6);
 }
 
 #main_content {
@@ -329,7 +344,7 @@ Full-Width Styles
 }
 
 #footer_wrap {
-  background: #212121;
+	background: rgba(21, 21, 21, 0.6);
 }
 
 
