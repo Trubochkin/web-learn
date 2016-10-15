@@ -209,7 +209,7 @@ ul.menu1 {
     list-style: none;
 }
 
-ul:after {
+ul.menu1:after {
     display: block;
     content: ' ';
     clear: both;
@@ -228,12 +228,12 @@ ul.menu1 > li > a {
     color: white;
     border-top-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    background-color: rgba(150, 150, 150, 0.5);
+    background-color: rgba(0, 144, 255, 0.8);
     text-decoration: none;
 }
 
 ul.menu1 > li > a:hover {
-    background-color: black;
+    background-color: rgba(0, 20, 255, 0.8);
 }
 ul.submenu1 {
     display: none;
@@ -253,7 +253,7 @@ ul.submenu1 > li > a {
     padding-left: 10px;
     padding-right: 10px;
     color: white;
-    background-color: rgba(150, 150, 150, 0.9);
+    background-color: rgba(0, 144, 255, 0.8);
     text-decoration: none;
 }
 ul.submenu1 > li > a:hover {
