@@ -4,7 +4,7 @@ by Jason Costello, @jsncostello
 *******************************************************************************/
 
 /* @import url(github-light.css); */
-
+@import url('https://fonts.googleapis.com/css?family=Bad+Script');
 /*******************************************************************************
 MeyerWeb Reset
 *******************************************************************************/
@@ -74,11 +74,11 @@ body {
     box-sizing: border-box;
     color: #f2f2f2;
     background-color: #212121;
-    background: url(../images/chalkboard.jpg) 100% 100% no-repeat;
+    background: url(../img/chalkboard.jpg) 100% 100% no-repeat;
     background-attachment: fixed;
     background-size: cover;
     font-size: 16px;
-    font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+    font-family: Calibri, Helvetica, Arial, sans-serif;
     line-height: 1.5;
 }
 
@@ -204,7 +204,7 @@ ul, ol, dl {
     padding: 0px;
 }
 
-ul {
+ul.menu1 {
     display: block;
     list-style: none;
 }
@@ -224,9 +224,11 @@ ul.menu1 > li{
 
 ul.menu1 > li > a {
     display: block;
-    padding: 10px;
+    padding: 8px;
     color: white;
-    background-color: red;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: rgba(150, 150, 150, 0.5);
     text-decoration: none;
 }
 
@@ -236,21 +238,22 @@ ul.menu1 > li > a:hover {
 ul.submenu1 {
     display: none;
     position: absolute;
-    width: 120px;
-    top: 37px;
+    width: auto;
+    top: 40px;
     left: 0;
-    background-color: white;
-    border: 1px solid red;
-    z-index: 200;
+    /*background-color: white;*/
+    /*border: 1px solid red;*/
+    z-index: 1;
 }
 ul.submenu1 > li {
     display: block;
 }
 ul.submenu1 > li > a {
     display: block;
-    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     color: white;
-    background-color: red;
+    background-color: rgba(150, 150, 150, 0.9);
     text-decoration: none;
 }
 ul.submenu1 > li > a:hover {
@@ -339,7 +342,7 @@ Full-Width Styles
     z-index: 10;
     padding: 2px 40px 5px 5px;
     color: #fff;
-    background: url('../images/blacktocat.png') #0090ff no-repeat 98% 50%;
+    background: url('../img/blacktocat.png') #0090ff no-repeat 98% 50%;
     font-weight: 700;
     box-shadow: 0 0 40px rgba(0, 0, 0, .8);
     border-bottom-left-radius: 10px;
@@ -354,7 +357,7 @@ Full-Width Styles
     z-index: 10;
     padding: 2px 40px 5px 5px;
     color: #fff;
-    background: url('../images/blacktocat.png') #3FBFFF no-repeat 98% 50%;
+    background: url('../img/blacktocat.png') #3FBFFF no-repeat 98% 50%;
     font-weight: 700;
     box-shadow: 0 0 40px rgba(255, 246, 86, .8);
     border-bottom-left-radius: 10px;
@@ -370,19 +373,22 @@ Full-Width Styles
     padding: 50px 10px 30px 10px;
 }
 
-#project_title {
+#project_title{
+    font-family: 'Bad Script', cursive;
     margin: 0;
+    padding-bottom: 20px;
     color: #fff;
-    font-size: 42px;
-    font-weight: 700;
+    font-size: 30pt;
+    font-weight: 200;
     text-shadow: #111 0px 0px 10px;
 }
 
-#project_title:hover {
+#project_title:hover{
+    font-family: 'Bad Script', cursive;
     margin: 0;
     color: #fff;
-    font-size: 42px;
-    font-weight: 700;
+    font-size: 30pt;
+    font-weight: 200;
     text-shadow: #ff2 0px 0px 10px;
 }
 
