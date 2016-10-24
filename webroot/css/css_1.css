@@ -8,8 +8,16 @@
 }
 
 div #px_3 {
+    display: inline-block;
     background-color: rgba(255, 239, 23, 0.65);
-    width: 600px;
+    width: 200px;
+    height: 100px;
+}
+
+div #px_4 {
+    display: inline-block;
+    background-color: rgba(255, 158, 11, 0.65);
+    width: 200px;
     height: 100px;
 }
 
