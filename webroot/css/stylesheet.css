@@ -307,7 +307,7 @@ Full-Width Styles
     text-decoration: none;
 }
 
-#project_title{
+#project_title {
     display: inline-block;
     font-family: 'Bad Script', cursive;
     margin: 0;
@@ -317,6 +317,42 @@ Full-Width Styles
     font-weight: 200;
     text-shadow: #111 0px 0px 10px;
 }
+
+
+#project_title div{
+    display: inline-block;
+    background-color: rgba(255, 6, 193, 0.6);;
+    font-family: Arial, cursive;
+    font-size: 0.5em;
+    border-radius: 5px;
+    padding: 0 5px;
+    margin-right: -10px;
+    margin-left: 10px;
+
+    /*transform-origin: 0 0 0;*/
+    transform: rotate(0deg) translateY(-400%);
+    animation-fill-mode: forwards;
+    animation-name: fuckBom;
+    animation-delay: 1s;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+}
+
+@keyframes fuckBom {
+    0% {
+        transform: rotate(0deg) translateY(-400%);
+    }
+    70% {
+
+        transform: rotate(0deg) translateY(-170%);
+    }
+    100% {
+        transform-origin: 100% 0%;
+        transform:  rotate(-30deg) translateY(-140%);
+    }
+}
+
+
 
 #project_title:hover{
     font-family: 'Bad Script', cursive;
